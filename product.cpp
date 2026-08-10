@@ -3,50 +3,53 @@ using namespace std;
 
 class Product
 {
-    int productid;
+    int productId;
     string productName;
     int quantity;
     float price;
-    
+
 public:
-void inputDetails()
-{
-    cout<<"Enter Product ID:";
-    cin>>productid;
 
-    cout<<"Enter Product Name:";
-    cin>>productName;
+    void inputDetails()
+    {
+        cout << "Enter Product ID: ";
+        cin >> productId;
 
-    cout<<"Enter Quantity:";
-    cin>>quantity;
+        cout << "Enter Product Name: ";
+        cin >> productName;
 
-    cout<<"Enter Price:";
-    cin>>price;
-}
-void displayDetails()
-{
-    cout<<"\n-----ProductDetails-----"<<
-    endl;
-    cout<<"Product ID:"<<productid<<endl;
+        cout << "Enter Quantity: ";
+        cin >> quantity;
 
-    cout<<"Product Name:"<<product Name:"<<productName<<endl;
-    cout<<"Quantity :"<<quantity<<
-    endl;
-    cout<<"Price :"<<price<<endl;
-}
+        cout << "Enter Price: ";
+        cin >> price;
+    }
+
+    void displayDetails()
+    {
+        cout << "\n----- Product Details -----" << endl;
+        cout << "Product ID   : " << productId << endl;
+        cout << "Product Name : " << productName << endl;
+        cout << "Quantity     : " << quantity << endl;
+        cout << "Price        : " << price << endl;
+    }
+
     void billing()
     {
-    float total;
-    total=quantity*price;
+        float total;
+        total = quantity * price;
 
-    cout<<"Total Bill :"<<total<<endl;
+        cout << "Total Bill   : " << total << endl;
     }
 };
-int main(){
-Product p;
-p.inputDetails();
-p.displyDetails();
-p.billing();
 
-return 0;
+int main()
+{
+    Product p;
+
+    p.inputDetails();
+    p.displayDetails();
+    p.billing();
+
+    return 0;
 }
